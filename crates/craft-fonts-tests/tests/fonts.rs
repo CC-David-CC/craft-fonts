@@ -906,3 +906,22 @@ fn bytes_from_entry(e: &Entry) -> Vec<u8> {
     std::fs::read(craft_fonts_tests::repo_root().join(&e.file))
         .unwrap_or_else(|err| panic!("{}: {err}", e.file))
 }
+
+/// Equation export needs a real math face even on machines without installed math fonts.
+#[test]
+fn math_face_has_a_math_table_and_drawn_math_alphabets() {
+    let faces = for_script("Zmth").collect::<Vec<_>>();
+    assert_eq!(faces.len(), 1, "one pinned math face must be available");
+    let face = faces[0];
+    assert_eq!(face.family, "STIX Two Math");
+    assert_eq!(face.style, "Regular");
+    let data = bytes(face);
+    let font = FontRef::new(&data).unwrap();
+    assert!(
+        font.table_data(skrifa::raw::types::Tag::new(b"MATH"))
+            .is_some()
+    );
+    for c in ['𝑥', '𝑦', '𝛼', '𝟘', '∑', '∫', '√', '(', ')'] {
+        assert_glyph_outline(&font, face.file, c);
+    }
+}

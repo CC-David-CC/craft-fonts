@@ -22,6 +22,8 @@ lists it: `fonts/manifest.txt` for the default embedded set, and
 | `fonts/noto-sans-devanagari/NotoSansDevanagari-Regular.ttf` | Noto Sans Devanagari Regular | The Noto Project Authors | [notofonts/devanagari NotoSansDevanagari-v2.007](https://github.com/notofonts/devanagari/releases/tag/NotoSansDevanagari-v2.007) | OFL-1.1 (`fonts/noto-sans-devanagari/OFL.txt`) |
 | `fonts/lxgw-wenkai-lite/LXGWWenKaiLite-Regular.ttf` | LXGW WenKai Lite Regular | LXGW / Luo Xia Gu Wu; derived from Fontworks Klee One | [lxgw/LxgwWenKai-Lite v1.530](https://github.com/lxgw/LxgwWenKai-Lite/releases/tag/v1.530) | OFL-1.1 (`fonts/lxgw-wenkai-lite/OFL.txt`) |
 
+| `fonts/stix-two-math/STIXTwoMath-Regular.otf` | STIX Two Math Regular | The STIX Fonts Project Authors | [stipub/stixfonts v2.13b171](https://github.com/stipub/stixfonts/tree/744a22a4dd626cd14d75728aef34fc8ad7c85db0) | OFL-1.1 (`fonts/stix-two-math/OFL.txt`) |
+
 The OFL allows these fonts to be bundled, embedded and redistributed with software, provided the
 licence text travels with them and the fonts are not sold on their own. "Shippori Mincho",
 "BIZ UD", "Noto" and "LXGW WenKai Lite" are the authors' names for their fonts; we use the files
